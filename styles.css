@@ -1,0 +1,86 @@
+body {
+    /*animation: 4ms linear 0s infinite backgroundcolor;*/
+   /* background-color: lightyellow;*/
+    margin: 0;
+}
+
+.bg-image{
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('33.png');
+    filter: blur(20px);
+    z-index: -2;
+}
+
+@keyframes backgroundcolor {
+    from {
+        background-color:WHITE;
+    }
+    to {
+        background-color:BLACK;
+    }
+}
+
+.mainText{
+    margin: 0;
+    text-align: center;
+    font-size: 72px;
+    font-family: 'Georama', sans-serif;
+    font-weight: 100;
+}
+.minorText{
+    margin: 10px;
+    text-align: center;
+    font-size: 64px;
+    font-family: 'Georama', sans-serif;
+    font-weight: 100;
+}
+
+h1{
+    margin: 0;
+}
+h3{
+    margin: 20px;
+}
+.button{
+    position: relative;
+    font-family: 'Georama', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    border: 2px solid #80b7fe;
+    transition-duration: 0.2s;
+    border-radius: 30px;
+    background-color: #80b7fe;
+    margin-top:20px;
+        --buttonWidth: 350px;
+        width: var(--buttonWidth);
+    margin-left: calc(50% - var(--buttonWidth)/2);
+    height: 100px;
+    cursor: pointer;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.button:hover{
+    background-color: transparent;
+}
+
+@keyframes buttonColor{
+    from {
+        border: 1px solid #80b7fe;
+    }
+    to {
+        border: 15px solid red;
+    }
+}
+
+.button:active {
+
+    content: "";
+    background: #80b7fe;
+    animation: 0.25s linear 0.25s buttonColor;
+}
