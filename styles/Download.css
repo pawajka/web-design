@@ -1,3 +1,15 @@
+body{
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: black;
+}
+
+canvas{
+    z-index: -500000;
+    position: absolute;
+    display: block;
+}
+
 .navbar-header-button{
     height: 100%
 }
@@ -13,12 +25,13 @@
 }
 
 .navbar-header{
+    height: 100px;
     font-size: xx-large;
     position: relative;
     margin: 15px 30px 15px 30px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -33,6 +46,7 @@
 }
 
 .navbar-name{
+    user-select: none;
     text-align: center;
     border-color: transparent;
     border-style: solid;
@@ -57,6 +71,7 @@
 }
 
 .navbar-lang{
+    height: 70%;
     width: 100px;
     background-color: #EAEAEA;
     border-radius: 15px;
@@ -220,5 +235,10 @@ ul > li:hover > span{
 ul > li:hover{
     background-color: #F5F5F5;
     transition: background-color 0.1s linear;
+}
+
+ul a{
+    color: black;
+    text-decoration: none;
 }
 

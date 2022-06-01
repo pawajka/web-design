@@ -14,8 +14,8 @@ body {
     background-size: cover;
     height: 100vh;
     width: 100vw;
-    background-image: url('../media/33.png');
-    filter: blur(20px);
+    background-image: url('../media/mainbg.jfif');
+    filter: blur(30px);
     z-index: -2;
 }
 
@@ -218,8 +218,86 @@ h3{
     opacity: 0;
 }
 
-.closeButton2:hover{
+.countdown{
+    display: none;
+}
 
+#countdown {
+    position: fixed;
+    top:0;
+    right:0;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+}
+
+#countdown-number {
+    color: white;
+    display: inline-block;
+    line-height: 40px;
+}
+
+#circleButtonText{
+    position: absolute;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    line-height: 40px;
+    left: 36%;
+}
+
+#circleButton{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    stroke-dasharray: 113px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke: white;
+    fill: none;
+}
+
+.circleButton{
+    display: none;
+}
+
+svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    transform: rotateY(-180deg) rotateZ(-90deg);
+    stroke-dasharray: 113px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke: white;
+    fill: none;
+}
+
+
+#countdown svg circle {
+    stroke-dasharray: 113px;
+    stroke-dashoffset: 0px;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke: white;
+    fill: none;
+    animation: countdown 10s linear forwards;
+}
+
+@keyframes countdown {
+    from {
+        stroke-dashoffset: 0px;
+    }
+    to {
+        stroke-dashoffset: 113px;
+    }
 }
 
 .button:active {
