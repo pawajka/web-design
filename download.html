@@ -3,6 +3,7 @@
 <head>
     <script defer src="./scripts/download.js"></script>
     <script defer src="./scripts/downloadBG.js"></script>
+    <script defer src="./scripts/downloadPage.js"></script>
     <link rel="stylesheet" href="./styles/Download.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +19,7 @@
     <div>
         <nav class="navbar">
             <div class="navbar-header">
-                <span class="navbar-image"></span>
+                <span class="navbar-image" onclick="pederClick()"></span>
                 <span class="navbar-name" onclick="showMenu()">Педер шупак црнчуга</span>
                 <div class="navbar-lang">
                     <div class="navbar-lang-name">Jезик</div>
@@ -28,7 +29,7 @@
                     </div>
                 </div>
             </div>
-            <div class="navbar-content navbar-content-hide" id="navbar-menu">
+            <div class="navbar-content navbar-content-show" id="navbar-menu">
                 <ul style="list-style-type: none">
                     <li><span><a href="#">Производ</a></span></li>
                     <li><span><a href="#">О програму</a></span></li>
@@ -41,6 +42,35 @@
             </div>
         </nav>
     </div>
-
+    <div class="content">
+        <p>
+            Дијагностички детектор - Светски стандард у откривању дијагнозе
+        </p>
+        <img class="content-image" src="media/disk.png"/>
+        <img class="content-image-download" src="media/download.png">
+        <div class="content-instruction">
+            <p>3 лака корака - испробајте најнапреднији детектор дијагнозе:</p>
+            <p>1. Пратите везу</p>
+            <p>2. Кликните на „дијагнозу“</p>
+            <p>3. Покрените скенирање!</p>
+        </div>
+        <div class="content-description">
+            <img src="media/descr.png" alt="no image"/>
+        </div>
+        <footer>
+            <p>123</p>
+        </footer>
+    </div>
+    <div class="blackScreen">
+        <div class="blackScreen-window">
+            <div>
+                <p>Чекати!</p>
+                <p>Зар заиста не желите да знате своју дијагнозу?</p>
+            </div>
+            <div class="blackScreen-close" onclick="blackScreenClose()" onmouseover="blackScreenCloseButtonOver()" onmouseout="blackScreenCloseButtonOut()" onmousedown="blackScreenCloseButtonDown()">
+                ❌
+            </div>
+        </div>
+    </div>
 </body>
 </html>
